@@ -22,11 +22,12 @@ var _systemjs2 = _interopRequireDefault(_systemjs);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//启动angular2
 System.import('app').catch(function (err) {
   console.error(err);
 });
 
-// config
+// config 
 //app 入口文件
 
 // Polyfill(s) for older browsers
