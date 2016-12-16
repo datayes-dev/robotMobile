@@ -25,5 +25,5 @@ exports.AppComponent = function AppComponent() {
 
 AppComponent.annotations = [new _core.Component({
   selector: 'my-app', //组件对应html标签名称  <my-app>Loading...</my-app>
-  template: '<h1>我的第一个 Angular 应用</h1>' //标签中的模板
+  templateUrl: './templates/search_main.html' //标签中的模板
 })];

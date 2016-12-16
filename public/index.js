@@ -68,6 +68,9 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	//启动之前加载CSS
+
+
 	//启动angular2
 	System.import('app').catch(function (err) {
 	  console.error(err);
@@ -18159,7 +18162,7 @@
 	  System.config({
 	    paths: {
 	      // paths serve as alias
-	      'npm:': 'node_modules/'
+	      'npm:': '../node_modules/'
 	    },
 	    // map tells the System loader where to look for things
 	    map: {
@@ -18193,7 +18196,7 @@
 	    // packages tells the System loader how to load when no filename and/or no extension
 	    packages: {
 	      app: {
-	        main: '../public/main.js',
+	        main: './main.js',
 	        defaultExtension: 'js'
 	      },
 	      rxjs: {

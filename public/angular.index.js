@@ -22,6 +22,9 @@ var _systemjs2 = _interopRequireDefault(_systemjs);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//启动之前加载CSS
+
+
 //启动angular2
 System.import('app').catch(function (err) {
   console.error(err);

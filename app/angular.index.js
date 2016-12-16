@@ -9,5 +9,8 @@ import systemjs from '../node_modules/systemjs/dist/system.src';
 // config 
 import config from '../systemjs.config';
 
+//启动之前加载CSS
+
+
 //启动angular2
 System.import('app').catch(function(err){ console.error(err); });
