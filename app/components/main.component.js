@@ -2,6 +2,7 @@
 主页面的UI组件
 **/
 import { Component } from '@angular/core';
+import { SearchTitleComponent } from './search.title.component.js';
 
 //主页面的UI组件，的逻辑封装类，主要为模型层暴露一些接口
 export class AppComponent {
@@ -9,6 +10,11 @@ export class AppComponent {
 	//构造函数
 	constructor() {
 		
+		//this.header = "";
+		this.section = "";
+		this.footer = "";
+		this.mTitle = SearchTitleComponent;
+		this.mTitle.setTile();
 	}
 }
 
