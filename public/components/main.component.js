@@ -24,8 +24,8 @@ exports.AppComponent = function AppComponent() {
 	//this.header = "";
 	this.section = "";
 	this.footer = "";
-	this.mTitle = _searchTitleComponent.SearchTitleComponent;
-	this.mTitle.setTile();
+	//this.mTitle = SearchTitleComponent;
+	//this.mTitle.setTile();
 };
 
 //这个是反向注入的注入数据

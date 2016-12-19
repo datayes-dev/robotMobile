@@ -13,8 +13,8 @@ export class AppComponent {
 		//this.header = "";
 		this.section = "";
 		this.footer = "";
-		this.mTitle = SearchTitleComponent;
-		this.mTitle.setTile();
+		//this.mTitle = SearchTitleComponent;
+		//this.mTitle.setTile();
 	}
 }
 
