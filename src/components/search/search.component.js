@@ -8,8 +8,8 @@ export default class SearchComponent extends React.Component {
 
   render() {
     return (
-    	<div className="mui-bar mui-bar-nav NavSearch">
-    		<input type="text" placeholder="搜索资讯、数据或研究"/>
+    	<div className="mui-bar">
+    		<input type="text" placeholder={this.props.contentText}/>
 	    </div>
     );
   }

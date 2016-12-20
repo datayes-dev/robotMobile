@@ -10,7 +10,7 @@ export default class MainComponent extends React.Component {
 
   render() {
     return (
-      <SearchComponent/>
+      <SearchComponent contentText="test0033556666"/>
     );
   }
 }
