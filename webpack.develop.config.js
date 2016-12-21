@@ -38,7 +38,7 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                loader: 'style!css' // 如果同时使用多个加载器，中间用 ! 连接，加载器的执行顺序是从右向左
+                loader: ExtractTextPlugin.extract("style-loader", "css-loader") // 如果同时使用多个加载器，中间用 ! 连接，加载器的执行顺序是从右向左
             },
             {
                 test: /\.(png|jpg|gif|jpeg)$/,
@@ -61,11 +61,11 @@ module.exports = {
     plugins: [
         //new CleanPlugin(['dist']),
         //压缩插件
-        new webpack.optimize.UglifyJsPlugin({
-            compress: {
-                warnings: false
-            }
-        }),
+        // new webpack.optimize.UglifyJsPlugin({
+        //     compress: {
+        //         warnings: false
+        //     }
+        // }),
         new ExtractTextPlugin("main.css"),
         new HtmlWebpackPlugin({
             template: './src/index.html',

@@ -33,7 +33,7 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                loader: 'style!css' // 如果同时使用多个加载器，中间用 ! 连接，加载器的执行顺序是从右向左
+                loader: ExtractTextPlugin.extract('css?modules&importLoaders=1&localIdentName=[name]_[local]_[hash:base64:5]') // 如果同时使用多个加载器，中间用 ! 连接，加载器的执行顺序是从右向左
             },
             {
                 test: /\.(png|jpg|gif|jpeg)$/,
