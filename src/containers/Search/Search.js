@@ -1,5 +1,5 @@
 import React from 'react';
-import { Loading, SimpleTitle } from 'components';
+import { Loading, SimpleTitleBar } from 'components';
 
 export default class Search extends React.Component {
     constructor(props) {
@@ -9,6 +9,6 @@ export default class Search extends React.Component {
         }
     }
     render() {
-        return <SimpleTitle title="aabb"></SimpleTitle>;
+        return <SimpleTitleBar title="aabb" backEanble="false"></SimpleTitleBar>;
     }
 }

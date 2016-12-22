@@ -1,2 +1,2 @@
 export Loading from './Loading/Loading';
-export SimpleTitle from './title/SimpleTitle';
+export SimpleTitleBar from './title/SimpleTitleBar';
