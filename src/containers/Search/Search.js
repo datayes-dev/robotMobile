@@ -9,6 +9,6 @@ export default class Search extends React.Component {
         }
     }
     render() {
-        return <SimpleTitle title="aa"></SimpleTitle>;
+        return <SimpleTitle title="aabb"></SimpleTitle>;
     }
 }
