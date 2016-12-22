@@ -1,31 +1,59 @@
 {
-  "name": "robotMobile",
+  "name": "rrp-search",
   "version": "0.1.0",
+  "description": "Seaching entry of RRP for anonymous user ",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "prebuild": "rm -rf ./dist/",
+    "build": "webpack -p --config webpack.prod.config.js",
+    "lint": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://git.datayes.com/Achilles/rrp-search"
+  },
+  "keywords": [
+    "search",
+    "rrp"
+  ],
+  "author": "Xing.Li",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.15.3",
+    "lodash": "^4.17.2",
+    "normalize.css": "^5.0.0",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "react-router": "^3.0.0"
+  },
   "devDependencies": {
-    "babel-cli": "^6.18.0",
-    "babel-core": "^6.21.0",
-    "babel-loader": "^6.2.10",
+    "autoprefixer": "^6.5.3",
+    "babel-core": "^6.18.2",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.2.9",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-react": "^6.16.0",
-    "clean-webpack-plugin": "^0.1.14",
-    "core-js": "^2.4.1",
+    "babel-preset-stage-0": "^6.16.0",
     "css-loader": "^0.26.1",
+    "eslint": "^3.12.1",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-loader": "^1.6.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.8.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
     "html-webpack-plugin": "^2.24.1",
-    "jsx-loader": "^0.13.2",
-    "node-sass": "^4.1.0",
-    "open-browser-webpack-plugin": "0.0.3",
-    "react": "^15.4.1",
-    "react-dom": "^15.4.1",
-    "sass-loader": "^4.1.0",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "postcss-loader": "^1.2.0",
+    "raw-loader": "^0.5.1",
+    "react-hot-loader": "^1.3.1",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
+    "webpack": "^1.14.0",
+    "webpack-browser-plugin": "^1.0.20",
     "webpack-dev-server": "^1.16.2"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "develop": "webpack-dev-server --config webpack.develop.config.js --devtool eval --progress --colors --hot --content-base src",
-    "publish": "webpack --config webpack.publish.config.js -p"
   }
 }
