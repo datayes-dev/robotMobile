@@ -1,4 +1,5 @@
 import React from 'react';
+import './title.less';
 
 /**
 一个简单的输入框 标题Bar
