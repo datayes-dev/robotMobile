@@ -1,5 +1,5 @@
 import React from 'react';
-import { Loading, SimpleTitleBar } from 'components';
+import { Loading, SimpleTitleBar, InputTitleBar } from 'components';
 
 export default class Search extends React.Component {
     constructor(props) {
@@ -9,6 +9,11 @@ export default class Search extends React.Component {
         }
     }
     render() {
-        return <SimpleTitleBar title="aabb" backEanble="false"></SimpleTitleBar>;
+        return <InputTitleBar iconClass="mui-icon-search" onInputBarEntered={this.onInputBarEntered} placeholder="搜索资讯、数据或研究"></InputTitleBar>;
+    }
+
+    onInputBarEntered(input) {
+
+    	console.log(input);
     }
 }
