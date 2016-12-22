@@ -35,7 +35,7 @@ export default class InputTitleBar extends React.Component {
 
   render() {
     return (
-    	<header className="title-bar mui-bar">
+    	<header className="title-bar mui-bar mui-bar-nav">
     		<div className="input-bar">
     			<p className={'title-icon mui-icon ' + this.state.iconClass + ' mui-pull-left'}></p>
           		<input className="input" onKeyUp={this.onInputKeyUp} type="text" placeholder={this.state.placeholder}></input>

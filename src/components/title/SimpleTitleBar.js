@@ -24,7 +24,7 @@ export default class SimpleTitleBar extends React.Component {
 
   render() {
     return (
-      <header className="title-bar mui-bar">
+      <header className="title-bar mui-bar mui-bar-nav">
         {
           this.state.backEanble &&
           <a className="title-icon mui-icon mui-icon-arrowleft mui-pull-left" onClick={this.onGoBackClicked}></a>
