@@ -12,7 +12,7 @@ export default class SimpleTabBar extends React.Component {
   constructor(props) {
     super(props);
 
-	this.state= {
+    this.state= {
     	curSelectIndex: this.props.startIndex ? this.props.startIndex : 0
     };
 
