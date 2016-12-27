@@ -9,7 +9,7 @@ export default class CompanyRelativeStock extends React.Component {
 
 	render() {
 		return (
-		  <CellBlueFoldTitle>公司相关公司</CellBlueFoldTitle>
+		  <CellBlueFoldTitle title="相关业务公司">公司相关公司</CellBlueFoldTitle>
 		);
 	}
 }

@@ -9,7 +9,7 @@ export default class RelativeAnnounce extends React.Component {
 
 	render() {
 		return (
-		  <CellBlueFoldTitle>无特型-相关公告</CellBlueFoldTitle>
+		  <CellBlueFoldTitle title="相关公告">无特型-相关公告</CellBlueFoldTitle>
 		);
 	}
 }

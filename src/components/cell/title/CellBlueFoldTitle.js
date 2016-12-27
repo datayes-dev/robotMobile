@@ -50,6 +50,7 @@ export default class CellBlueFoldTitle extends React.Component {
 				<div className={this.state.fold ? "cell-white-title-container" : "cell-white-title-container mui-hidden"}>
 					{this.props.children}
 				</div>
+				<div className="cell-white-title-foot"/>
 		 	</div>
 		);
 	}

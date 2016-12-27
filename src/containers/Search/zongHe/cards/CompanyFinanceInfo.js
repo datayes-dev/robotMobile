@@ -9,7 +9,7 @@ export default class CompanyFinanceInfo extends React.Component {
 
 	render() {
 		return (
-		  <CellBlueFoldTitle>公司财务信息</CellBlueFoldTitle>
+		  <CellBlueFoldTitle title="财务信息">公司财务信息</CellBlueFoldTitle>
 		);
 	}
 }

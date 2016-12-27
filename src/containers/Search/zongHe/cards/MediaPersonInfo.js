@@ -9,7 +9,7 @@ export default class MediaPersonInfo extends React.Component {
 
 	render() {
 		return (
-		  <CellBlueFoldTitle>传媒特型-演员基本信息</CellBlueFoldTitle>
+		  <CellBlueFoldTitle title="个人信息">传媒特型-演员基本信息</CellBlueFoldTitle>
 		);
 	}
 }

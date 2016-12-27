@@ -9,7 +9,7 @@ export default class MediaWorks extends React.Component {
 
 	render() {
 		return (
-		  <CellBlueFoldTitle>传媒特型-作品信息</CellBlueFoldTitle>
+		  <CellBlueFoldTitle title="作品信息">传媒特型-作品信息</CellBlueFoldTitle>
 		);
 	}
 }

@@ -9,7 +9,7 @@ export default class RelativeNews extends React.Component {
 
   	render() {
 	    return (
-	      <CellBlueFoldTitle>无特型-相关新闻</CellBlueFoldTitle>
+	      <CellBlueFoldTitle title="相关新闻">无特型-相关新闻</CellBlueFoldTitle>
 	    );
   	}
 }
