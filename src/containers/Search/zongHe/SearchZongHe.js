@@ -15,9 +15,9 @@ export default class SearchZongHe extends React.Component {
         this.analysisKMaps = this.analysisKMaps.bind(this);
     }
 
-    componentWillReceiveProps() {
+    componentWillReceiveProps(nextProps) {
 
-        if (this.props.searchInput != null) {
+        if (nextProps.searchInput != null) {
 
             let _this = this;
 
@@ -26,7 +26,7 @@ export default class SearchZongHe extends React.Component {
                 request.KMAP_INIT, 
                 {
                     data: {
-                        input: this.props.searchInput
+                        input: nextProps.searchInput
                     },
                     success: function(response) {
 
