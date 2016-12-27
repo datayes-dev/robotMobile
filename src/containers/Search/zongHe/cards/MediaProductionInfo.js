@@ -1,4 +1,5 @@
 import React from 'react';
+import { CellBlueFoldTitle } from 'components';
 
 export default class MediaProductionInfo extends React.Component {
 
@@ -8,7 +9,7 @@ export default class MediaProductionInfo extends React.Component {
 
 	render() {
 		return (
-		  <div>传媒特型-作品基本信息</div>
+		  <CellBlueFoldTitle>传媒特型-作品基本信息</CellBlueFoldTitle>
 		);
 	}
 }

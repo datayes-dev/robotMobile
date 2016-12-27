@@ -39,7 +39,7 @@ export default class Search extends React.Component {
     render() {
 
         return (
-            <div className="mui-content">
+            <div>
                 <InputTitleBar iconClass="mui-icon-search" onInputBarEntered={this.onInputBarEntered} placeholder="搜索资讯、数据或研究"></InputTitleBar>
                 <div className="mui-content">
                     <SimpleTabBar tabs={["综合", "数据", "公告", "新闻"]} onTabClicked={this.onTabClicked}></SimpleTabBar>
