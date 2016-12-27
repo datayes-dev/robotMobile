@@ -8,7 +8,7 @@ export default class SearchData extends React.Component {
 
   render() {
     return (
-      <div>数据</div>
+      <div className={this.props.show ? "" : "mui-hidden"}>数据</div>
     );
   }
 }

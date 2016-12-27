@@ -38,21 +38,21 @@ export default class Search extends React.Component {
 
     render() {
 
-        let tabComponentJXS;
+        // let tabComponentJXS;
 
-        switch (this.state.curTab) {
-            case 0 :
-                tabComponentJXS = <SearchZongHe searchInput={this.state.searchInput}/>;
-                break;
-            case 1 :
-                tabComponentJXS = <SearchData searchInput={this.state.searchInput}/>;
-                break;
-            case 2 :
-                tabComponentJXS = <SearchAnnouncement searchInput={this.state.searchInput}/>;
-                break;
-            case 3 :
-                tabComponentJXS = <SearchNews searchInput={this.state.searchInput}/>;
-        }
+        // switch (this.state.curTab) {
+        //     case 0 :
+        //         tabComponentJXS = <SearchZongHe searchInput={this.state.searchInput}/>;
+        //         break;
+        //     case 1 :
+        //         tabComponentJXS = <SearchData searchInput={this.state.searchInput}/>;
+        //         break;
+        //     case 2 :
+        //         tabComponentJXS = <SearchAnnouncement searchInput={this.state.searchInput}/>;
+        //         break;
+        //     case 3 :
+        //         tabComponentJXS = <SearchNews searchInput={this.state.searchInput}/>;
+        // }
 
         return (
             <div>
@@ -60,7 +60,10 @@ export default class Search extends React.Component {
                 <div className="mui-content">
                     <SimpleTabBar tabs={["综合", "数据", "公告", "新闻"]} onTabClicked={this.onTabClicked}></SimpleTabBar>
                 </div>
-                {tabComponentJXS}
+                <SearchZongHe searchInput={this.state.searchInput} show={this.state.curTab == 0}/>
+                <SearchData searchInput={this.state.searchInput} show={this.state.curTab == 1}/>
+                <SearchAnnouncement searchInput={this.state.searchInput} show={this.state.curTab == 2}/>
+                <SearchNews searchInput={this.state.searchInput} show={this.state.curTab == 3}/>
             </div>
         );
     }

@@ -7,6 +7,9 @@ export default class SearchZongHe extends React.Component {
     constructor(props) {
         super(props);
 
+        //上一次搜索的字符串
+        this.lastSearchInput = "";
+
         this.state = {
 
           components: null//特型组件
@@ -17,9 +20,12 @@ export default class SearchZongHe extends React.Component {
 
     componentWillReceiveProps(nextProps) {
 
-        if (nextProps.searchInput != null) {
+        if (nextProps.show && nextProps.searchInput != null 
+          && nextProps.searchInput.length > 0 && nextProps.searchInput != this.lastSearchInput) {
 
             let _this = this;
+
+            this.lastSearchInput = nextProps.searchInput;
 
             //开始请求特型
             request.start(
@@ -77,7 +83,7 @@ export default class SearchZongHe extends React.Component {
         }
 
         return (
-            <div>{componentJXS}</div>
+            <div className={this.props.show ? "" : "mui-hidden"}>{componentJXS}</div>
         );
     }
 

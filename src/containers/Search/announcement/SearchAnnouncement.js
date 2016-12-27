@@ -8,7 +8,7 @@ export default class SearchAnnouncement extends React.Component {
 
   render() {
     return (
-      <div>公告</div>
+      <div className={this.props.show ? "" : "mui-hidden"}>公告</div>
     );
   }
 }
