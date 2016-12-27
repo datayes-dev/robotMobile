@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class MediaWorks extends React.Component {
+export default class CompanyRelativeStock extends React.Component {
 
 	constructor(props) {
 		super(props);
@@ -8,7 +8,7 @@ export default class MediaWorks extends React.Component {
 
 	render() {
 		return (
-		  <div>传媒特型-作品信息</div>
+		  <div>公司相关公司</div>
 		);
 	}
 }

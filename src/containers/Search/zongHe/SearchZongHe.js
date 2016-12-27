@@ -15,32 +15,35 @@ export default class SearchZongHe extends React.Component {
         this.analysisKMaps = this.analysisKMaps.bind(this);
     }
 
-    componentDidMount() {
+    componentWillReceiveProps() {
 
-        let _this = this;
+        if (this.props.searchInput != null) {
 
-        //开始请求特型
-        request.start(
-            request.KMAP_INIT, 
-            {
-                data: {
-                    input: "300027"
-                },
-                success: function(response) {
+            let _this = this;
 
-                    if(response.code == 1) {
+            //开始请求特型
+            request.start(
+                request.KMAP_INIT, 
+                {
+                    data: {
+                        input: this.props.searchInput
+                    },
+                    success: function(response) {
 
-                        _this.analysisKMaps(response);
+                        if(response.code == 1) {
 
-                    } else {
-                        
+                            _this.analysisKMaps(response);
+
+                        } else {
+                            
+                        }
+                    }, 
+                    error: function() {
+
                     }
-                }, 
-                error: function() {
-
                 }
-            }
-        );	
+            );
+        }
     }
 
     analysisKMaps(response) {
@@ -59,7 +62,6 @@ export default class SearchZongHe extends React.Component {
 
         let components = this.state.components;
         let componentJXS = [];
-        console.log(components);
 
         if (components != null) {
 
