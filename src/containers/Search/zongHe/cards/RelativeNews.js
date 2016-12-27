@@ -1,4 +1,5 @@
 import React from 'react';
+import { CellBlueFoldTitle } from 'components';
 
 export default class RelativeNews extends React.Component {
 
@@ -8,7 +9,7 @@ export default class RelativeNews extends React.Component {
 
   	render() {
 	    return (
-	      <div>无特型-相关新闻</div>
+	      <CellBlueFoldTitle title="相关新闻">无特型-相关新闻</CellBlueFoldTitle>
 	    );
   	}
 }

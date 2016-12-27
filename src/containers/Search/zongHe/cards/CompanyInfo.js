@@ -1,4 +1,5 @@
 import React from 'react';
+import { CellBlueFoldTitle } from 'components';
 
 export default class CompanyInfo extends React.Component {
 
@@ -8,7 +9,7 @@ export default class CompanyInfo extends React.Component {
 
 	render() {
 		return (
-		  <div>公司信息BOX</div>
+		  <CellBlueFoldTitle>公司信息BOX</CellBlueFoldTitle>
 		);
 	}
 }

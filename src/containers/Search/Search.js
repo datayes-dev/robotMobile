@@ -38,22 +38,6 @@ export default class Search extends React.Component {
 
     render() {
 
-        // let tabComponentJXS;
-
-        // switch (this.state.curTab) {
-        //     case 0 :
-        //         tabComponentJXS = <SearchZongHe searchInput={this.state.searchInput}/>;
-        //         break;
-        //     case 1 :
-        //         tabComponentJXS = <SearchData searchInput={this.state.searchInput}/>;
-        //         break;
-        //     case 2 :
-        //         tabComponentJXS = <SearchAnnouncement searchInput={this.state.searchInput}/>;
-        //         break;
-        //     case 3 :
-        //         tabComponentJXS = <SearchNews searchInput={this.state.searchInput}/>;
-        // }
-
         return (
             <div>
                 <InputTitleBar iconClass="mui-icon-search" onInputBarEntered={this.onInputBarEntered} placeholder="搜索资讯、数据或研究"></InputTitleBar>
