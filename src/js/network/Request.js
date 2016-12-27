@@ -28,7 +28,15 @@ class Request {
 			type: "GET",
 			serviceType: SUB_SERVICE_URL.MOBILE,
 			url: "/whitelist/kmap/company/relatedOperation"
-		}
+		};
+		
+		//获取演员详情
+		this.SEARCH_PERSON_INFO= {
+			type: "GET",
+			serviceType: SUB_SERVICE_URL.MOBILE,
+			url: "/whitelist/kmap/person/info"
+		};
+		
 		
 	}
 
