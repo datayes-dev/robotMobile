@@ -29,7 +29,7 @@ export default class SearchZongHe extends React.Component {
 
             //开始请求特型
             request.start(
-                request.KMAP_INIT, 
+                request.SEARCH_KMAP_INIT, 
                 {
                     data: {
                         input: nextProps.searchInput
@@ -77,8 +77,8 @@ export default class SearchZongHe extends React.Component {
 
                 let component = components[i];
                 componentJXS[i] = React.createElement(
-                  component.component, {key: i, basicInfo: component.basicInfo
-                });
+                  component.component, {key: i, basicInfo: component.basicInfo, parent: this}
+                );
             }
         }
 

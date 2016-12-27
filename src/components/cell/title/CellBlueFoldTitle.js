@@ -3,6 +3,9 @@ import 'css/main.less';
 import './CellTitle.less';
 
 //Cell用的蓝色标题, 支持点击更多，折叠展开，收起
+//fold 初始化收起，展开
+//title 标题内容
+//点击更多的回调
 export default class CellBlueFoldTitle extends React.Component {
  
 	constructor(props) {
@@ -37,7 +40,7 @@ export default class CellBlueFoldTitle extends React.Component {
 		  	<div>
 		  		<div className="cell-white-title border-blue-left bottom_gray_line">
 		  			<img className="icon" src={!this.state.fold ? iconAdd : iconReduce} onClick={this.onFoldBtnClicked}/>
-					<h1 className="mui-title blue">{this.state.title}</h1>
+					<h1 className="mui-title color_B1">{this.state.title}</h1>
 					{
 						this.props.moreCallBack != null &&
 						<a className="mui-inline" onClick={this.props.moreCallBack}>

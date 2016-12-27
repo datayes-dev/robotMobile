@@ -17,11 +17,19 @@ class Request {
 		///这里写接口配置
 
 		//获取搜索特型接口
-		this.KMAP_INIT = {
+		this.SEARCH_KMAP_INIT = {
 			type: "GET",
 			serviceType: SUB_SERVICE_URL.MOBILE,
 			url: "/whitelist/kmap/init"
 		};
+
+		//相关业务公司
+		this.SEARCH_RELATED_OPERATION = {
+			type: "GET",
+			serviceType: SUB_SERVICE_URL.MOBILE,
+			url: "/whitelist/kmap/company/relatedOperation"
+		}
+		
 	}
 
 	//////////////////////////////////////////////////////////////////////////
