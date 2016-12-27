@@ -1,6 +1,8 @@
 
+//配置文件
+
 //PRD, STG, QA
-let const SERVICE_TYPE = "STG";
+export const SERVICE_TYPE = "STG";
 
 //网络请求BaseUrl
 export const BASE_URL = {

@@ -44,7 +44,7 @@ const CARD_LIST = [
 	},
 ];
 
-let analysis = function(basicInfo) {
+let parser = function(basicInfo) {
 
 	let components = new Array();  
 
@@ -98,5 +98,5 @@ let analysis = function(basicInfo) {
 	return components;
 }
 
-export { analysis };
+export { parser };
 

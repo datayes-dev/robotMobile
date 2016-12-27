@@ -1,6 +1,6 @@
 import { SERVICE_TYPE, BASE_URL, SUB_SERVICE_URL } from 'config';
 
-class RequestUrl {
+class Request {
 
 	constructor() {
 
@@ -20,7 +20,7 @@ class RequestUrl {
 
 		} else {
 
-			return BASE_URL.QA;
+			return BASE_URL.STG;
 		}
 
 		return "";
@@ -33,7 +33,25 @@ class RequestUrl {
 			&& requestInfo.type != null 
 			&& requestInfo.serviceType != null && requestInfo.url != null) {
 
-			return this.getBaseUrl() + requestInfo.serviceType + requestInfo.url;
+			if (requestInfo.serviceType == SUB_SERVICE_URL.MOBILE) {
+
+				if (SERVICE_TYPE == "PRD") {
+
+					return this.getBaseUrl() + SUB_SERVICE_URL.MOBILE.PRD + requestInfo.url;
+
+				} else if (SERVICE_TYPE == "QA") {
+
+					return this.getBaseUrl() + SUB_SERVICE_URL.MOBILE.STG + requestInfo.url;
+
+				} else {
+
+					return this.getBaseUrl() + SUB_SERVICE_URL.MOBILE.QA + requestInfo.url;
+				}
+
+			} else {
+
+				return this.getBaseUrl() + requestInfo.serviceType + requestInfo.url;
+			}
 		}
 
 		return "";
@@ -49,7 +67,7 @@ class RequestUrl {
 			obj.type = requestInfo.type;
 			obj.url = this.getRequestUrl(requestInfo);
 
-			$.ajax(obj);	
+			_$.ajax(obj);	
 		}
 	}
 
@@ -68,6 +86,5 @@ class RequestUrl {
 	}
 }
 
-
-let request = new RequestUrl();
+let request = new Request();
 export { request };

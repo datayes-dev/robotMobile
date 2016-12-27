@@ -19,7 +19,9 @@ module.exports = {
             assets: path.resolve(__dirname, 'src/assets'),
             components: path.resolve(__dirname, 'src/components'),
             containers: path.resolve(__dirname, 'src/containers'),
-            css: path.resolve(__dirname, 'src/css')
+            css: path.resolve(__dirname, 'src/css'),
+            config: path.resolve(__dirname, 'src/config.js'),
+            request: path.resolve(__dirname, 'src/js/network/Request.js')
         },
         extensions: ['', '.js']
     },

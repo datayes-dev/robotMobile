@@ -3,6 +3,7 @@ import { Loading, SimpleTitleBar, InputTitleBar, SimpleTabBar } from 'components
 import { SearchZongHe, SearchAnnouncement, SearchData,SearchNews } from 'containers';
 
 export default class Search extends React.Component {
+    
     constructor(props) {
     
         super(props);
