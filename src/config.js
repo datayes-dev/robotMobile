@@ -1,6 +1,6 @@
 
 //PRD, STG, QA
-let const CUR_BASE = "STG";
+let const SERVICE_TYPE = "STG";
 
 //网络请求BaseUrl
 export const BASE_URL = {
