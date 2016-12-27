@@ -1,10 +1,10 @@
 import React from 'react';
-import './SearchBaseInfoListView.less';
+import './SingleStringClickCell.less';
 
 /**
 
 **/
-export default class SearchBaseInfoListView extends React.Component {
+export default class SingleStringClickCell extends React.Component {
 
   constructor(props) {
     super(props);
