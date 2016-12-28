@@ -1,18 +1,33 @@
 import React from 'react';
-import {
-	request
-} from 'request';
-
-import {
-	CellBlueFoldTitle
-} from 'components';
+import { ThreeStringClickCell } from 'components';
+import { request } from 'request';
+import { CellBlueFoldTitle } from 'components';
 
 export default class MediaPersonInfo extends React.Component {
 
 	constructor(props) {
 		super(props);
-	}
 
+		this.state = {
+
+			show: false,
+			personInfos: null
+		}
+
+		this.onMoreClicked = this.onMoreClicked.bind(this);
+		
+	}
+	onMoreClicked() {
+
+		//todo 跳转到相关公司的落地页
+	}
+	
+		onsClicked() {
+
+		//todo 跳转到相关公司的落地页
+	}
+	
+	
 	componentDidMount() {
 		console.log((this.props.basicInfo.keywordsInfo[0]).entityID);
 
@@ -25,27 +40,26 @@ export default class MediaPersonInfo extends React.Component {
 					entityID: (this.props.basicInfo.keywordsInfo[0]).entityID
 				},
 				success: function(response) {
-					alert(12);
+				
 					if(response.code == 1) {
-						actorDetailRequestHandle("success", response);
+						_this.actorDetailRequestHandle("success", response);
 						console.log(response);
 					} else {
-						actorDetailRequestHandle("fail", reqContent);
-
+						_this.actorDetailRequestHandle("fail", reqContent);
 					}
 
 				},
 				error: function() {
-					actorDetailRequestHandle("fail", reqContent);
-
+					_this.actorDetailRequestHandle("fail", reqContent);
 				}
 			}
 		);
 	}
 
 	//设置演员模块
-	function actorDetailRequestHandle(isSuccess, jsonStr) {
+	 actorDetailRequestHandle(isSuccess, jsonStr) {
 		if(isSuccess == "success") {
+		
 			var data = jsonStr.kMapMediaPersonInfo;
 			var contentHtml = "";
 			var contentArray = new Array();
@@ -67,15 +81,23 @@ export default class MediaPersonInfo extends React.Component {
 
 			var knownWorksHtml = '代表作品：';
 			if(data.knownWorks != null && data.knownWorks.length > 0) {
-				knownWorksHtml = knownWorksHtml + getNameAndLinkByData(data.knownWorks[0]);
-				for(var i = 1; i < data.knownWorks.length; i++) {
-					knownWorksHtml = knownWorksHtml + "、" + getNameAndLinkByData(data.knownWorks[i]);
+			 
+				for(var i = 0; i < data.knownWorks.length; i++) {
+					var work = data.knownWorks[i];
+			
+					knownWorksHtml = knownWorksHtml + work.name;
+					if(i != data.knownWorks.length-1){
+						knownWorksHtml = knownWorksHtml + "、";
+					}
 				}
 			} else {
 				knownWorksHtml = knownWorksHtml + "--";
 			}
+			
 			contentArray.push(knownWorksHtml);
+									
 		} else {
+			alert(11);
 			var contentArray = new Array();
 			var contentHtml = "";
 			contentHtml = '经纪公司：--';
@@ -85,11 +107,28 @@ export default class MediaPersonInfo extends React.Component {
 			var knownWorksHtml = '代表作品：--';
 			contentArray.push(knownWorksHtml);
 		}
+	
+		this.setState({
+			show: true,
+			personInfos: contentArray
+		});
 	}
-
+	
+	
 	render() {
-		return( <
-			CellBlueFoldTitle title = "个人信息" > 传媒特型ss 演员基本信息 < /CellBlueFoldTitle>
+
+	let baseInfos = this.state.personInfos;
+	console.log(baseInfos);
+	if(!this.state.show || baseInfos == null || (baseInfos != null && baseInfos.length <= 0)) {
+				return (
+		      <div></div>
+		    );
+	} 
+		return (
+			<CellBlueFoldTitle title="个人信息" moreCallBack={ this.onMoreClicked }>
+		  		<ThreeStringClickCell contents={ baseInfos } onTabClicked={this.onMoreClicked}></ThreeStringClickCell>
+		  	</CellBlueFoldTitle>
 		);
 	}
+	
 }
