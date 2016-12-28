@@ -97,15 +97,8 @@ export default class MediaPersonInfo extends React.Component {
 			contentArray.push(knownWorksHtml);
 									
 		} else {
-			alert(11);
+		 
 			var contentArray = new Array();
-			var contentHtml = "";
-			contentHtml = '经纪公司：--';
-			contentArray.push(contentHtml);
-			contentHtml = '出生日期：-- ';
-			contentArray.push(contentHtml);
-			var knownWorksHtml = '代表作品：--';
-			contentArray.push(knownWorksHtml);
 		}
 	
 		this.setState({
@@ -118,7 +111,7 @@ export default class MediaPersonInfo extends React.Component {
 	render() {
 
 	var baseInfos = this.state.personInfos;
-	console.log(baseInfos);
+ 
 	if(!this.state.show || baseInfos == null || (baseInfos != null && baseInfos.length <= 0)) {
 				return (
 		      <div></div>
