@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThreeStringClickCell } from 'components';
+import { SingleStringClickCell } from 'components';
 import { request } from 'request';
 import { CellBlueFoldTitle } from 'components';
 
@@ -117,16 +117,17 @@ export default class MediaPersonInfo extends React.Component {
 	
 	render() {
 
-	let baseInfos = this.state.personInfos;
+	var baseInfos = this.state.personInfos;
 	console.log(baseInfos);
 	if(!this.state.show || baseInfos == null || (baseInfos != null && baseInfos.length <= 0)) {
 				return (
 		      <div></div>
 		    );
 	} 
+	
 		return (
 			<CellBlueFoldTitle title="个人信息" moreCallBack={ this.onMoreClicked }>
-		  		<ThreeStringClickCell contents={ baseInfos } onTabClicked={this.onMoreClicked}></ThreeStringClickCell>
+		  	    <SingleStringClickCell contents={baseInfos}></SingleStringClickCell>
 		  	</CellBlueFoldTitle>
 		);
 	}
